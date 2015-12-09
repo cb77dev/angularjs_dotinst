@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp" ng-app="mainApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="myscript.js"></script>
 </head>
 <body>
-	<h1>test2</h1>
+	<h1>test</h1>
+	<div ng-controller="mainCtrl">
+		<p>{{users.length}} users.</p>
+		<ul>
+			<li ng-repeat="user in main.users">
+				{{user.name}}{{user.score}}
+			</li>
+			
+		</ul>
+	</div>
 </body>
 </html>
